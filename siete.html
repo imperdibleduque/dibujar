@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    
+  <script language="javascript" type="text/javascript" >
+  
+		var ancho = 10;
+		function setup() {
+			createCanvas(640,360);
+			background(134);
+		}
+
+		function draw() {
+			stroke(random(0,255),random(0,255),random(0,255));  
+			strokeWeight(ancho);
+			if(mouseIsPressed===true){
+				line(mouseX, mouseY, pmouseX, pmouseY);
+			}
+		}
+	
+		function keyPressed() {
+			if (keyCode === UP_ARROW) {
+			ancho+=1;
+			} else if (keyCode === DOWN_ARROW) {
+				ancho-=1;
+			}
+			return false; // prevent default
+		}
+  
+  </script>
+  <style> body {padding: 0; margin: 0;} </style>
+</head>
+
+<body>
+</body>
+</html>
